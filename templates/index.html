@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <style>
+            input{
+                display: block;
+                margin: 5px;
+            }
+        </style>
+        <div>
+            <h2>Log In</h2>
+            <form action="http://localhost:5000/login" method="POST">
+                <input type="text" name="username" placeholder="username" />
+                <input type="password" name="password" placeholder="password" />
+                <input type="submit" />
+            </form>
+        </div>
+
+        <div>
+            <h2>Enter token to access API if u have one or log in to get one</h2>
+            <form action="http://localhost:5000/auth" method="POST">
+                <input type="text" name="token" placeholder="enter token" />
+                <input type="submit" />
+            </form>
+        </div>
+
+        <div>
+            <h2>your tokens(if any)</h2>
+            <p>for the first time there will be no token </p>
+            <p>
+                {{data['token']}}
+            </p>
+        </div>
+
+        <div>
+            <h2>message</h2>
+            <p>{{data['message']}}</p>
+        </div>
+    </body>
+</html>
