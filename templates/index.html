@@ -7,6 +7,12 @@
             }
         </style>
         <div>
+            <h2>directions to use the api</h2>
+            <p>once log in, a json web token will be issued to the user, this jwt will expire after 2 minutes</p>
+            <p>to access upload portal, please provide a valid token</p>
+            <p>a user can use the api resources 5 times a minute i.e. can only upload five files in a singlr minute</p>
+        </div>
+        <div>
             <h2>Log In</h2>
             <form action="http://localhost:5000/login" method="POST">
                 <input type="text" name="username" placeholder="username" />
